@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Твои возможности МЕДМОЛ ЛГМУ — 2026/2027</title>
+<meta name="description" content="Каталог студенческих возможностей ЛГМУ на 2026/2027: наука, волонтёрство, спорт, культура, карьера, стипендии, психологическая помощь.">
+<meta property="og:title" content="Твои возможности МЕДМОЛ ЛГМУ — 2026/2027">
+<meta property="og:description" content="Найди своё направление: наука, волонтёрство, спорт, культура, карьера, поддержка.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b3d91">
+<style>
+  :root {
+    --primary: #0b3d91;
+    --secondary: #1e5bb8;
+    --light-blue: #e8f0ff;
+    --accent: #f0a500;
+    --accent-bg: #fff7e6;
+    --bg-gradient: linear-gradient(135deg, #0b3d91 0%, #1e5bb8 100%);
+    --shadow: 0 4px 14px rgba(0,0,0,0.15);
+    --shadow-soft: 0 2px 6px rgba(0,0,0,0.06);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --surface: #ffffff;
+    --surface-muted: #f8fbff;
+    --border: #e0e8f5;
+    --text: #1a1a1a;
+    --text-muted: #4a5568;
+    --focus-ring: 0 0 0 3px #ffb800, 0 0 0 5px rgba(11, 61, 145, 0.4);
+  }
+
+  [data-category="science"]   { --section: #0b3d91; --section-bg: #e8f0ff; }
+  [data-category="volunteer"] { --section: #1a7f5a; --section-bg: #e3f6ed; }
+  [data-category="sport"]     { --section: #c76a00; --section-bg: #fff0db; }
+  [data-category="culture"]   { --section: #6b3fa0; --section-bg: #f0e8fb; }
+  [data-category="patriot"]   { --section: #b02a37; --section-bg: #fbe5e7; }
+  [data-category="council"]   { --section: #0e7490; --section-bg: #dff5fa; }
+  [data-category="career"]    { --section: #3d4ba6; --section-bg: #e8eafb; }
+  [data-category="support"]   { --section: #8a6d00; --section-bg: #fbf3d6; }
+  [data-category="psych"]     { --section: #b03a7a; --section-bg: #fae8f2; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 30px 15px 60px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .container { max-width: 950px; margin: 0 auto; }
+
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+  }
+
+  /* ===== ЛОГОТИПЫ ===== */
+  .logos-bar {
+    display: flex; align-items: center; justify-content: center;
+    gap: 30px; margin-bottom: 24px; padding: 16px 24px;
+    background: rgba(255,255,255,0.96); border-radius: 14px;
+    box-shadow: var(--shadow); flex-wrap: wrap;
+  }
+  .logo { height: 60px; width: auto; max-width: 220px; object-fit: contain; display: block; }
+  .logo-fallback {
+    height: 60px; min-width: 120px; display: none; align-items: center;
+    justify-content: center; background: var(--light-blue);
+    border: 2px dashed var(--secondary); border-radius: 10px;
+    color: var(--primary); font-weight: 600; font-size: 13px;
+    padding: 0 16px; text-align: center;
+  }
+  .logos-divider { width: 1px; height: 50px; background: #c7d8f0; }
+
+  h1 {
+    color: #fff; text-align: center; font-size: 30px;
+    margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .subtitle {
+    color: #e3ecff; text-align: center; margin-bottom: 22px;
+    font-size: 15px; line-height: 1.55; max-width: 720px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* ===== ЧИПЫ-ФИЛЬТРЫ ===== */
+  .filter-chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 16px; justify-content: center;
+  }
+  .chip {
+    padding: 8px 14px; border-radius: 20px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.14); color: #fff;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    font-family: inherit;
+  }
+  .chip:hover { background: rgba(255,255,255,0.28); border-color: rgba(255,255,255,0.8); }
+  .chip:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+  .chip.active { background: #fff; color: var(--primary); border-color: #fff; }
+
+  /* ===== ТУЛБАР ===== */
+  .toolbar {
+    display: flex; gap: 10px; justify-content: center;
+    margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .toolbar input {
+    flex: 1; min-width: 200px; max-width: 400px;
+    padding: 11px 16px; border: none; border-radius: var(--radius-sm);
+    font-size: 14px; outline: none; box-shadow: var(--shadow);
+    font-family: inherit; color: var(--text);
+  }
+  .toolbar input:focus-visible { box-shadow: var(--focus-ring); }
+  .toolbar button {
+    padding: 11px 18px; border: none; border-radius: var(--radius-sm);
+    background: #fff; color: var(--primary); font-weight: 600;
+    font-size: 14px; cursor: pointer; box-shadow: var(--shadow);
+    transition: background 0.2s, transform 0.15s;
+    font-family: inherit;
+  }
+  .toolbar button:hover { background: var(--light-blue); transform: translateY(-1px); }
+  .toolbar button:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+  .search-status {
+    text-align: center; color: #fff; font-size: 13px;
+    min-height: 20px; margin-bottom: 12px; padding: 0 10px;
+  }
+  .search-status[data-tone="empty"] { color: #ffd7d7; }
+
+  /* ===== АККОРДЕОН (<details>) ===== */
+  .accordion-item {
+    background: #fff; border-radius: var(--radius); margin-bottom: 14px;
+    overflow: hidden; box-shadow: var(--shadow);
+    transition: transform 0.2s;
+    border-left: 4px solid var(--section, var(--primary));
+  }
+  .accordion-item:hover { transform: translateY(-2px); }
+  .accordion-item.filtered-out,
+  .accordion-item.hidden,
+  .sub-item.hidden { display: none !important; }
+
+  .accordion-item > summary,
+  .sub-item > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    transition: background 0.2s;
+    user-select: none;
+  }
+  .accordion-item > summary::-webkit-details-marker,
+  .sub-item > summary::-webkit-details-marker { display: none; }
+  .accordion-item > summary::marker,
+  .sub-item > summary::marker { content: ''; }
+
+  .accordion-item > summary {
+    padding: 18px 22px;
+    background: #fff;
+  }
+  .accordion-item > summary:hover,
+  .accordion-item > summary:focus-visible {
+    background: var(--section-bg, #f0f6ff);
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--section, var(--secondary));
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .icon {
+    font-size: 26px; width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--section-bg, var(--light-blue));
+    border-radius: 10px; flex-shrink: 0;
+  }
+  .header-text { min-width: 0; }
+  .title {
+    display: block; font-size: 17px; font-weight: 700;
+    color: var(--section, var(--primary)); line-height: 1.25;
+  }
+  .meta {
+    display: block; font-size: 12px; color: var(--text-muted);
+    margin-top: 3px; font-weight: 500;
+  }
+  .arrow {
+    font-size: 18px; color: var(--section, var(--primary));
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .accordion-item[open] > summary .arrow,
+  .sub-item[open] > summary .sub-arrow { transform: rotate(180deg); }
+
+  .body-content {
+    padding: 14px 18px 18px;
+    background: var(--surface-muted);
+    border-top: 1px solid var(--border);
+    animation: fadeSlide 0.25s ease;
+  }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== ПОДПУНКТЫ ===== */
+  .sub-item {
+    background: #fff; border-radius: 10px; margin-bottom: 10px;
+    overflow: hidden; border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+  }
+  .sub-item:last-child { margin-bottom: 0; }
+  .sub-item > summary {
+    padding: 14px 16px;
+    background: #fff;
+  }
+  .sub-item > summary:hover,
+  .sub-item > summary:focus-visible {
+    background: var(--section-bg, #f0f6ff);
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--section, var(--secondary));
+  }
+
+  /* Обёртка иконки + заголовка подпункта */
+  .sub-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+  }
+  .sub-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--section-bg, #f0f6ff);
+    border: 1px solid var(--border);
+  }
+
+  .sub-title {
+    font-size: 15px; font-weight: 600;
+    color: var(--section, var(--secondary));
+    line-height: 1.3;
+  }
+  .sub-arrow {
+    font-size: 14px; color: var(--section, var(--secondary));
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .sub-content {
+    padding: 12px 16px 16px;
+    border-top: 1px solid #eef4fc;
+    font-size: 14px; color: var(--text); line-height: 1.6;
+    background: #fbfdff;
+    animation: fadeSlide 0.2s ease;
+  }
+  .sub-content h4 {
+    font-size: 13px; color: var(--primary); margin: 14px 0 6px 0;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .sub-content h4:first-child { margin-top: 0; }
+  .sub-content p { margin: 6px 0; }
+  .sub-content ul { list-style: none; margin: 6px 0; }
+  .sub-content li { padding: 3px 0 3px 20px; position: relative; }
+  .sub-content li::before {
+    content: "›"; position: absolute; left: 2px;
+    color: var(--section, var(--secondary));
+    font-weight: bold; font-size: 16px; line-height: 1.4;
+  }
+  .sub-content strong { color: var(--primary); }
+  .sub-content a {
+    color: var(--secondary); text-decoration: none;
+    border-bottom: 1px solid rgba(30,91,184,0.3);
+  }
+  .sub-content a:hover { border-bottom-color: var(--secondary); }
+  .sub-content a[href^="tel:"],
+  .sub-content a[href^="mailto:"] { white-space: nowrap; }
+
+  /* ===== БЛОКИ ===== */
+  .join-block {
+    background: var(--accent-bg); border-left: 4px solid var(--accent);
+    padding: 10px 14px; border-radius: 6px; margin-top: 12px;
+    font-size: 13px; color: #6b4400;
+  }
+  .join-block strong {
+    color: #6b4400; display: block; margin-bottom: 3px;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .join-block p { margin: 4px 0; }
+  .join-block a { color: #6b4400; text-decoration: underline; }
+
+  .contact {
+    background: var(--light-blue); padding: 12px 14px;
+    border-radius: 8px; font-size: 13px; color: var(--primary);
+    margin-top: 12px;
+  }
+  .contact strong { display: block; margin-bottom: 4px; }
+  .contact a { color: var(--secondary); text-decoration: none; word-break: break-word; }
+  .contact a:hover { text-decoration: underline; }
+
+  .mini-card {
+    border-left: 3px solid var(--section, var(--secondary));
+    padding: 8px 12px; margin: 10px 0;
+    background: #f7faff; border-radius: 0 8px 8px 0;
+  }
+  .mini-card h4 { margin-top: 0 !important; }
+
+  /* ===== ВИДЕО ===== */
+  .video-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .video-heading {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: #000;
+  }
+  .video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center; color: #d6e4ff; margin-top: 20px;
+    font-size: 13px; padding-bottom: 20px;
+  }
+  footer a { color: #fff; }
+  .footer-note { display: block; font-size: 12px; opacity: 0.85; margin-top: 6px; }
+
+  /* ===== КНОПКА НАВЕРХ ===== */
+  .back-to-top {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--primary); color: #fff; border: none;
+    font-size: 20px; cursor: pointer; box-shadow: var(--shadow);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 100;
+  }
+  .back-to-top.visible { opacity: 1; pointer-events: auto; }
+  .back-to-top:hover { transform: translateY(-3px); }
+  .back-to-top:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+  /* ===== МОБИЛЬНАЯ ===== */
+  @media (max-width: 600px) {
+    body { padding: 16px 10px 60px; }
+    h1 { font-size: 22px; }
+    .subtitle { font-size: 13px; }
+    .logos-bar { gap: 14px; padding: 12px; }
+    .logo { height: 40px; max-width: 140px; }
+    .logos-divider { display: none; }
+    .accordion-item > summary { padding: 14px 16px; }
+    .title { font-size: 15px; }
+    .icon { font-size: 22px; width: 38px; height: 38px; }
+    .sub-item > summary { padding: 12px 14px; }
+    .sub-title { font-size: 14px; }
+    .sub-icon { width: 34px; height: 34px; }
+    .toolbar { flex-direction: column; align-items: stretch; }
+    .toolbar input { max-width: 100%; }
+    .filter-chips { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
+    .chip { flex-shrink: 0; }
+    .video-heading { font-size: 17px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ===== ТЁМНАЯ ТЕМА ===== */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface: #1a2233;
+      --surface-muted: #131a27;
+      --border: #2a3447;
+      --text: #e6ecf5;
+      --text-muted: #8a9bb5;
+      --light-blue: #1e2a42;
+    }
+    body { background: linear-gradient(135deg, #0a1a35 0%, #14264a 100%); }
+    .logos-bar { background: rgba(26,34,51,0.96); }
+    .accordion-item { background: var(--surface); }
+    .accordion-item > summary { background: var(--surface); }
+    .sub-item,
+    .sub-item > summary { background: var(--surface); }
+    .sub-content { background: #0f1520; color: #c9d5e8; }
+    .sub-content h4 { color: #7aa7ff; }
+    .sub-content strong { color: #9ec1ff; }
+    .contact { background: #1e2a42; color: #c9d5e8; }
+    .join-block { background: #2b2410; color: #f2d38a; }
+    .join-block strong { color: #f2d38a; }
+    .join-block a { color: #ffd97a; }
+    .mini-card { background: #1c2437; }
+    .toolbar button { background: #1e2a42; color: #9ec1ff; }
+    .toolbar button:hover { background: #263655; }
+    .toolbar input { background: #1a2233; color: #e6ecf5; }
+    [data-category="science"]   { --section-bg: #12213f; }
+    [data-category="volunteer"] { --section-bg: #0f2e22; }
+    [data-category="sport"]     { --section-bg: #3a2408; }
+    [data-category="culture"]   { --section-bg: #26153f; }
+    [data-category="patriot"]   { --section-bg: #3d0f14; }
+    [data-category="council"]   { --section-bg: #0a2a33; }
+    [data-category="career"]    { --section-bg: #171d3f; }
+    [data-category="support"]   { --section-bg: #2b2410; }
+    [data-category="psych"]     { --section-bg: #33112a; }
+  }
+
+  /* ===== ПЕЧАТЬ ===== */
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000;
+      padding: 0;
+      font-size: 11pt;
+    }
+    .logos-bar { box-shadow: none; border: 1px solid #ccc; margin-bottom: 12px; }
+    h1 { color: #000 !important; text-shadow: none; font-size: 18pt; }
+    .subtitle { color: #333 !important; }
+
+    .filter-chips,
+    .toolbar,
+    .search-status,
+    .back-to-top,
+    .video-section { display: none !important; }
+
+    .accordion-item.hidden,
+    .accordion-item.filtered-out,
+    .sub-item.hidden { display: none !important; }
+
+    .accordion-item > .body-content,
+    .sub-item > .sub-content { display: block !important; }
+
+    .accordion-item {
+      box-shadow: none; border: 1px solid #ccc;
+      page-break-inside: avoid; transform: none !important;
+    }
+    .accordion-item > summary { background: #fff !important; }
+    .arrow, .sub-arrow { display: none !important; }
+    .sub-item { border: 1px solid #ddd; page-break-inside: avoid; box-shadow: none; }
+    .sub-icon { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .join-block { background: #f5f5f5; border-left-color: #999; color: #000; }
+    .join-block strong { color: #000; }
+    .contact { background: #f0f0f0; color: #000; }
+    .contact a, .sub-content a { color: #000; border-bottom: none; }
+    .mini-card { background: #f5f5f5; }
+    footer { color: #666; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="logos-bar">
+    <img src="https://orelmed.org/Obyavlenie/2026/medmol/1b.jpg"
+         alt="МЕДМОЛ" class="logo" id="logo-medmol"
+         width="220" height="60" decoding="async">
+    <div class="logo-fallback" id="fallback-medmol" role="img" aria-label="Логотип МЕДМОЛ">ЛОГОТИП МЕДМОЛ</div>
+    <div class="logos-divider" aria-hidden="true"></div>
+    <img src="https://sh-roskoshnyanskaya-r181.gosweb.gosuslugi.ru/netcat_files/48/234/lgmu_logo.jpg"
+         alt="ЛГМУ" class="logo" id="logo-lgmu"
+         width="220" height="60" decoding="async">
+    <div class="logo-fallback" id="fallback-lgmu" role="img" aria-label="Логотип ЛГМУ">ЛОГОТИП ЛГМУ</div>
+  </header>
+
+  <h1>Твои возможности МЕДМОЛ ЛГМУ</h1>
+  <p class="subtitle">
+    2026/2027 учебный год · Выбери направление — узнай, как присоединиться.
+  </p>
+
+  <nav class="filter-chips" aria-label="Фильтр по категориям">
+    <button type="button" class="chip active" data-filter="all">Все</button>
+    <button type="button" class="chip" data-filter="science">Наука</button>
+    <button type="button" class="chip" data-filter="volunteer">Волонтёрство</button>
+    <button type="button" class="chip" data-filter="sport">Спорт</button>
+    <button type="button" class="chip" data-filter="culture">Культура</button>
+    <button type="button" class="chip" data-filter="patriot">Патриотика</button>
+    <button type="button" class="chip" data-filter="council">Студсовет</button>
+    <button type="button" class="chip" data-filter="career">Карьера</button>
+    <button type="button" class="chip" data-filter="support">Поддержка</button>
+    <button type="button" class="chip" data-filter="psych">Психология</button>
+  </nav>
+
+  <div class="toolbar" role="search">
+    <label for="searchInput" class="visually-hidden">Поиск по разделам</label>
+    <input type="search" id="searchInput" placeholder="Поиск: волонтёр, спорт, стипендия…" autocomplete="off">
+    <button type="button" id="expandAllBtn">Развернуть все</button>
+    <button type="button" id="collapseAllBtn">Свернуть все</button>
+  </div>
+
+  <p class="search-status" id="searchStatus" role="status" aria-live="polite"></p>
+
+  <main class="accordion" id="accordion">
+
+    <!-- ==================== НАУКА ==================== -->
+    <details class="accordion-item" data-category="science">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🔬</span>
+          <span class="header-text">
+            <span class="title">Наука и научные кружки</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <img src="https://static8.tgstat.ru/channels/_0/54/544972bf985b72a690c1493af0e8d8af.jpg"
+                   alt="" class="sub-icon" width="40" height="40" loading="lazy" decoding="async">
+              <span class="sub-title">НОМУС — научное общество молодых учёных и студентов</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>НОМУС — научное общество студентов и молодых учёных ЛГМУ. Работает с 1956 года. Сегодня это объединение единомышленников, где будущие врачи и учёные получают первый исследовательский опыт.</p>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Первый научный опыт — конференции, публикации, кружки</li>
+              <li>Практические навыки — медицинские манипуляции, разбор клинических случаев</li>
+              <li>Наставники и профессиональное сообщество</li>
+              <li>Помогает при поступлении в ординатуру</li>
+            </ul>
+            <h4>Мероприятия 2025/2026</h4>
+            <ul>
+              <li>Ярмарка студенческой науки</li>
+              <li>Юбилейная X олимпиада по практическим навыкам «Я доктор»</li>
+              <li>Международная конференция «Искусство врачевания» (к 70-летию ЛГМУ)</li>
+              <li>«LINGUA LATINA VIVA» — внутривузовская конференция</li>
+              <li>V всероссийская олимпиада по терапии</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Подойди к преподавателю на кафедре или напиши в сообщество <a href="https://vk.com/sno_lgmu" target="_blank" rel="noopener noreferrer">vk.com/sno_lgmu</a>. Заседания проходят регулярно в течение семестра.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Студенческие научные кружки (СНК) кафедр</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>У каждой кафедры — свой СНК. Это не формальные заседания, а реальная наука: лабораторная работа, выезды, интерактив.</p>
+
+            <div class="mini-card">
+              <h4>Медицинской и фармацевтической химии</h4>
+              <ul>
+                <li>Работа в лабораториях, синтез лекарственных субстанций</li>
+                <li>Темы: механизмы апоптоза в культурах клеток, биохимические показатели здоровья</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Нормальной физиологии — «PHYSIOLAND»</h4>
+              <ul>
+                <li>Медицинские обследования школьников в лицеях по договорам о сотрудничестве</li>
+                <li>Итоговые заседания с докладами</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Психиатрии и наркологии</h4>
+              <ul>
+                <li>Интерактивные психологические тесты на «Ярмарке науки»</li>
+                <li>Клинико-патофизиологическое направление в психиатрии</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Акушерства и гинекологии</h4>
+              <ul>
+                <li>Практические демонстрации — например, измерение наружных размеров таза</li>
+                <li>Научные направления: гомеостаз при гестозе, эндоскопические методы</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Микробиологии и вирусологии</h4>
+              <ul>
+                <li>Итоговые собрания по результатам НИР</li>
+                <li>Совместные конференции с кафедрой инфекционных болезней</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Фтизиатрии, клинической иммунологии и медицинской генетики</h4>
+              <ul>
+                <li>Межрегиональная олимпиада по фтизиатрии</li>
+                <li>Межвузовские заседания</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Общей врачебной практики и медицинской реабилитации</h4>
+              <ul>
+                <li>Участие в международных конкурсах научных работ</li>
+                <li>Научный руководитель — к.м.н., доцент</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Фундаментальной и клинической фармакологии</h4>
+              <ul>
+                <li>Разработка анальгетиков — первый патент ЛГМУ с 2014 года</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Медицинской биологии</h4>
+              <ul>
+                <li>Записаться можно прямо на кафедре</li>
+              </ul>
+            </div>
+
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Подойти на кафедру к научному руководителю СНК или к старосте кружка. Группы ВК конкретных кружков — через НОМУС: <a href="https://vk.com/sno_lgmu" target="_blank" rel="noopener noreferrer">vk.com/sno_lgmu</a> или в деканате.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Научные мероприятия</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Ярмарка науки</h4>
+            <p>Ежегодная выставка всех СНК. Стенды посещают сотни студентов, многие сразу подают заявки на вступление.</p>
+            <h4>Олимпиада «Я доктор. Серебряный клинок»</h4>
+            <p>X юбилейная межрегиональная олимпиада по экстренной помощи. Конкурсы: «Медицинский триатлон», «Аптечка», «В ритме сердца», «Чрезвычайная ситуация».</p>
+            <h4>Научная битва ЛГМУ</h4>
+            <p>Формат научных боёв в рамках Университетской лиги.</p>
+            <h4>Ежегодные конференции</h4>
+            <ul>
+              <li>«Здоровье нации — приоритет современности»</li>
+              <li>«Здоровье ребёнка как предмет мультидисциплинарного исследования»</li>
+              <li>«Искусство врачевания» (по итогам практики)</li>
+              <li>«LINGUA LATINA VIVA»</li>
+              <li>Олимпиада по терапии</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Следить за анонсами на сайте ЛГМУ и в сообществе <a href="https://vk.com/sno_lgmu" target="_blank" rel="noopener noreferrer">vk.com/sno_lgmu</a>.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Публикации, гранты, патенты</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Публикации</h4>
+            <ul>
+              <li>Сборник «Проблемы экологической и медицинской генетики и клинической иммунологии»</li>
+              <li>Ежегодный сборник тезисов по итогам студенческой научной конференции</li>
+              <li>Статьи в сборниках конференций, в том числе с индексацией в РИНЦ</li>
+            </ul>
+            <h4>Гранты и патенты</h4>
+            <ul>
+              <li>Разработка анальгетиков — патент Роспатента</li>
+              <li>Возможности: РФФИ, РНФ, Фонд содействия инновациям («У.М.Н.И.К», «Студенческий стартап»)</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как получить поддержку</strong>
+              <p>Обратиться в научный отдел университета, участвовать в круглых столах по финансированию научных исследований.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== ВОЛОНТЁРСТВО ==================== -->
+    <details class="accordion-item" data-category="volunteer">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🤝</span>
+          <span class="header-text">
+            <span class="title">Волонтёрство и добровольчество</span>
+            <span class="meta">3 организации · 7 направлений · наставничество</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <p style="font-size:14px;color:#4a5568;margin-bottom:14px;">
+          Волонтёрство в ЛГМУ — это официальный путь к дополнительным баллам при поступлении в ординатуру (до 100 баллов за один критерий), реальная практика и участие в федеральных проектах.
+        </p>
+
+        <!-- ========== 1. ВОД «Волонтёры-медики» ЛНР ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <img src="https://storage.yandexcloud.net/dobro-static/prod/images/cc6c9f26-df3a-ecc8-271e-e8c98e07185c.jpg"
+                   alt="" class="sub-icon" width="40" height="40" loading="lazy" decoding="async">
+              <span class="sub-title">ВОД «Волонтёры-медики» ЛНР — региональное отделение</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Региональное отделение Всероссийского общественного движения «Волонтёры-медики» работает на базе ЛГМУ с мая 2021 года. Объединяет более 350 студентов. 8 июня 2022 года подписано соглашение о сотрудничестве с ЛГМУ и Донецким национальным медицинским университетом.</p>
+
+            <h4>Направления деятельности</h4>
+            <ul>
+              <li>Волонтёрская помощь в медицинских организациях — работа в больницах и поликлиниках</li>
+              <li>Санитарно-профилактическое просвещение — лекции и беседы с населением</li>
+              <li>Обучение первой помощи и сопровождение мероприятий — парады, концерты, спортивные соревнования</li>
+              <li>Программы для школьников — профориентация и мастер-классы</li>
+              <li>Популяризация кадрового донорства — акции и просветительство</li>
+              <li>Здоровый образ жизни — профилактика заболеваний</li>
+              <li>Проект «Добро в село» — выездные мероприятия в сельской местности</li>
+            </ul>
+
+            <h4>Подразделения</h4>
+            <ul>
+              <li>Волонтёрский отряд «Твори добро» (руководитель — Буйниченко Д.А.)</li>
+              <li>Волонтёрский отряд «Добродетель» (руководитель — Лаптинова Т.В.)</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Подписаться на сообщество ВКонтакте, связаться с координатором регионального отделения, следить за анонсами в официальных группах университета.</p>
+            </div>
+
+            <div class="contact">
+              <strong>Контакты:</strong>
+              Email: <a href="mailto:lnr@volmedic.com">lnr@volmedic.com</a><br>
+              Сайт: <a href="https://волонтеры-медики.рф" target="_blank" rel="noopener noreferrer">волонтеры-медики.рф</a><br>
+              Добро.рф: <a href="https://dobro.ru/organizations/10039478/about" target="_blank" rel="noopener noreferrer">профиль организации</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 2. Отряд «Добродетель» ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Волонтёрский отряд «Добродетель»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Один из старейших отрядов ЛГМУ. Основан в мае 2002 года на педиатрическом факультете. За 20+ лет сменились 5 командиров отряда, сохранён «костяк» после событий 2014 года.</p>
+            <p><strong>Девиз:</strong> «Волонтёрское движение — добродетелей совет! Мы хорошими делами славим университет!»</p>
+
+            <h4>Специализация</h4>
+            <ul>
+              <li>Работа с детьми — сказки, концерты, игровые программы в детских учреждениях</li>
+              <li>Благотворительные акции — сбор игрушек, канцелярии, одежды</li>
+              <li>Поздравления ветеранов ВОВ на дому</li>
+              <li>Наставничество и преемственность между курсами</li>
+              <li>Творческие форматы — пение, сцена, ведение мероприятий</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться к руководителю отряда через деканат педиатрического факультета.</p>
+            </div>
+
+            <div class="contact">
+              <strong>Руководитель:</strong>
+              старший преподаватель Лаптинова Татьяна Васильевна
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 3. Отряд «Твори добро» ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Волонтёрский отряд «Твори добро»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Волонтёрский отряд «Твори добро» является подразделением движения «Волонтёры-медики». Руководитель — ассистент кафедры офтальмологии и оториноларингологии Буйниченко Д.А.</p>
+
+            <h4>Деятельность</h4>
+            <ul>
+              <li>Участие в донорских акциях на базе Луганской республиканской станции переливания крови</li>
+              <li>Посещение детских учреждений — развлекательные программы, подарки</li>
+              <li>Передача гуманитарного груза в детские учреждения ЛНР</li>
+              <li>Совместные акции с отрядом «Добродетель»</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться к руководителю отряда через кафедру офтальмологии и оториноларингологии.</p>
+            </div>
+
+            <div class="contact">
+              <strong>Руководитель:</strong>
+              ассистент кафедры офтальмологии и оториноларингологии Буйниченко Д.А.
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 4. Направления деятельности ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Направления деятельности и проекты</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+
+            <div class="mini-card">
+              <h4>Первая помощь и мастер-классы</h4>
+              <ul>
+                <li>Практические навыки — СЛР, приём Геймлиха, наложение жгута</li>
+                <li>Мастер-классы для школьников, работников организаций, населения</li>
+                <li>Проект «М.О.З.Г. 4,5» — обучение распознаванию инсульта</li>
+                <li>Сертификация в Луганском центре медицины катастроф</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Донорское движение</h4>
+              <ul>
+                <li>Коллективные сдачи крови в ЛРСПК (ул. Оборонная, 1а)</li>
+                <li>«Кубок молодёжного донорства» — всероссийский конкурс среди вузов</li>
+                <li>Вступление в Федеральный регистр доноров костного мозга</li>
+                <li>Часы работы ЛРСПК: пн–пт 08:00–14:00</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Помощь детям и социальное волонтёрство</h4>
+              <ul>
+                <li>Шефство над детскими домами и отделениями больниц</li>
+                <li>Сбор игрушек, канцелярии, одежды для нуждающихся</li>
+                <li>Акция «С любовью в сердце» — адресная помощь</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Волонтёрство в СВО и помощь бойцам</h4>
+              <ul>
+                <li>Сбор гуманитарной помощи для фронта</li>
+                <li>Поздравления бойцов СВО с праздниками</li>
+                <li><strong>До 100 баллов при поступлении в ординатуру</strong> — при стаже ≥150 часов</li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h4>Профориентация и «Добро в село»</h4>
+              <ul>
+                <li>Мастер-классы для школьников «Примерить профессию»</li>
+                <li>Выездные профориентационные встречи в районах ЛНР</li>
+                <li>Помощь в проведении осмотров, информирование о профилактике</li>
+              </ul>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ========== 5. Баллы в ординатуру ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Баллы в ординатуру за волонтёрство</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Согласно п. 48 Правил приёма на 2026/2027 (протокол №3 от 19.03.2026, приказ №101 от 19.03.2026), волонтёрская деятельность даёт дополнительные баллы к конкурсной сумме.</p>
+
+            <h4>Три критерия по волонтёрству</h4>
+            <ul>
+              <li><strong>Ж. Волонтёрство в сфере охраны здоровья</strong> (в том числе с регистрацией в единой информационной системе) — <strong>20 баллов</strong>. Без условия о минимальном количестве часов.</li>
+              <li><strong>З. Волонтёрство по профилактике, диагностике и лечению COVID-19</strong>, продолжительность <strong>≥150 часов</strong> — <strong>20 баллов</strong>.</li>
+              <li><strong>И. Волонтёрство, связанное с проведением СВО</strong>, продолжительность <strong>≥150 часов</strong> — <strong>100 баллов</strong>.</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Правила выбора при пересечении (п. 49)</strong>
+              <p>При наличии достижений по «З» и «К» — баллы начисляются только по «К» (30 баллов, а не 50).</p>
+              <p>При наличии достижений по «Г» и «Л» — баллы начисляются только по одному из них, по выбору поступающего.</p>
+            </div>
+
+            <h4>Как подтвердить волонтёрский стаж</h4>
+            <ul>
+              <li>Регистрация на платформе <strong>Добро.рф</strong> — все часы фиксируются автоматически</li>
+              <li>Верифицированная выписка из личного кабинета Добро.рф — основной документ</li>
+              <li>Дополнительно — справка от организации, где проходило волонтёрство</li>
+              <li>Для критерия «И» (СВО) — отдельный учёт часов, связанных с проведением спецоперации</li>
+            </ul>
+
+            <div class="contact">
+              <strong>Полный перечень баллов за индивидуальные достижения</strong>
+              <p>См. раздел «Карьера» → «Как получить баллы в ординатуру». Там же — критерии Б (диплом с отличием, 55 баллов), Л (стаж в новых регионах, до 300 баллов), М (целевое → целевое, 200 баллов) и другие.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 6. Добро.рф ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Добро.рф — платформа учёта волонтёрства</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Добро.рф — крупнейшая федеральная платформа добрых дел, официальный инструмент учёта волонтёрских часов и верификации стажа. ЛГМУ активно взаимодействует с ассоциацией «Добро.рф»: в августе 2026 года проректор Н.С. Черникова представила опыт университета на всероссийском семинаре в Центре знаний «Машук».</p>
+
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Верифицированные волонтёрские часы — официальное подтверждение стажа</li>
+              <li>Доступ к федеральным проектам и стажировкам</li>
+              <li>Обучающие курсы Добро.Университета</li>
+              <li>Участие в конкурсах и премиях</li>
+              <li>Официальное подтверждение стажа для критериев Ж, З, И при поступлении в ординатуру</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как зарегистрироваться</strong>
+              <p>Создать личный кабинет на <a href="https://dobro.ru" target="_blank" rel="noopener noreferrer">dobro.ru</a>, найти организацию «Волонтёры-медики | ЛНР» (ID: 10039478) и присоединиться к проектам.</p>
+            </div>
+
+            <div class="contact">
+              <strong>Контакт:</strong>
+              администратор Добро.рф в ЛГМУ — Кисель Константин Витальевич
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 7. Обучение служением ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Программа «Обучение служением»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Программа «Обучение служением» стартовала в ЛГМУ 18 сентября 2023 года одновременно с открытием Реабилитационного центра в рамках гранта «Реабилитация демобилизованных участников СВО — Один за всех и все за одного». Это образовательная методика, объединяющая теоретическое обучение и практическую общественную деятельность.</p>
+
+            <h4>Участники</h4>
+            <ul>
+              <li>Студенты 4 и 5 курсов лечебного, педиатрического и фармацевтического факультетов</li>
+              <li>Ординаторы кафедры общей врачебной практики и медицинской реабилитации</li>
+            </ul>
+
+            <h4>Проекты</h4>
+            <ul>
+              <li><strong>Реабилитация участников СВО</strong> — студенты и ординаторы оказывают реабилитационную помощь демобилизованным участникам СВО под контролем опытных преподавателей</li>
+              <li><strong>Разработка персонифицированных программ</strong> — восстановительные мероприятия, диетотерапия, прогнозирование осложнений</li>
+              <li><strong>Фармацевтическое консультирование</strong> — практика для студентов фармацевтического факультета</li>
+            </ul>
+
+            <h4>Достижения</h4>
+            <ul>
+              <li>Доц. Ковалева И.С. — победитель регионального этапа премии #МЫВМЕСТЕ в номинации «Наставник года»</li>
+              <li>Более 180 волонтёров и более 80 участников СВО получили помощь</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Программа интегрирована в образовательные дисциплины «Фармацевтическое консультирование» и «Медицинская реабилитация». Следить за анонсами на кафедре общей врачебной практики и медицинской реабилитации.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- ========== 8. Наставничество ========== -->
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Наставничество в ЛГМУ</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>В ЛГМУ действует система наставничества, закреплённая Приказом №71-п от 01.09.2025. С 1 марта 2026 года все выпускники медицинских вузов и колледжей должны несколько лет работать с наставником.</p>
+
+            <h4>Как это работает</h4>
+            <ul>
+              <li><strong>Для ординаторов:</strong> совмещение практической подготовки и стажировки на клинических базах под руководством опытных наставников</li>
+              <li><strong>Для выпускников:</strong> обязательный период наставничества после окончания вуза (до 3 лет)</li>
+              <li><strong>Для молодых специалистов:</strong> поддержка в адаптации и профессиональном развитии</li>
+            </ul>
+
+            <h4>Примеры</h4>
+            <ul>
+              <li>Ординаторы-онкологи Хорошилов И.С. и Щербакова Ю.В. проходят стажировку в ГБУЗ «Луганский республиканский клинический онкологический диспансер» под руководством заведующих отделениями — Цыганка Л.И., Мохаммеда А., Зновенко И.А.</li>
+              <li>На ярмарке вакансий опытные специалисты диспансеров готовы обучать и поддерживать молодых коллег</li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Как стать наставником или найти наставника</strong>
+              <p>Обратиться в деканат, на профильную кафедру или в Центр карьеры. Системная работа по наставничеству — долгосрочный вклад в укрепление кадрового потенциала здравоохранения республики.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== СПОРТ ==================== -->
+    <details class="accordion-item" data-category="sport">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🏆</span>
+          <span class="header-text">
+            <span class="title">Спорт и физическая культура</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Спортивный клуб «Медик»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Студенческий спортивный клуб (ССК) «Медик» — структурное подразделение ЛГМУ, работает под руководством кафедры физической культуры.</p>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Бесплатные секции и регулярные тренировки</li>
+              <li>Спортивный инвентарь для сборных команд</li>
+              <li>Участие в республиканских и всероссийских турнирах</li>
+              <li>Поддержание физической формы будущего врача</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться на кафедру физической культуры (корпус №1, ул. Крупской, 44) или к председателю клуба.</p>
+            </div>
+            <div class="contact">
+              <strong>Председатель:</strong>
+              В.М. Сероштан, зав. кафедрой физической культуры, профессор
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Спортивные секции и направления</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Виды спорта</h4>
+            <ul>
+              <li>Игровые: футбол (мини-футбол), баскетбол, волейбол, настольный теннис</li>
+              <li>Силовые: пауэрлифтинг</li>
+              <li>Лёгкая атлетика</li>
+              <li>Шахматы, дартс</li>
+              <li>Спортивная аэробика</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться на кафедру физической культуры к преподавателю-тренеру по выбранному виду спорта.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Соревнования и достижения</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Ключевые победы</h4>
+            <ul>
+              <li><strong>«Кубок Донбасса» по пауэрлифтингу</strong> — 1-е общекомандное место</li>
+              <li><strong>Универсиада ЛНР по шахматам</strong> — 1-е место</li>
+              <li><strong>Чемпионат по баскетболу</strong> — достойное представление вуза</li>
+            </ul>
+            <h4>Традиционные мероприятия</h4>
+            <ul>
+              <li>Спартакиада лечебного факультета (7 видов спорта)</li>
+              <li>Спартакиада «Бодрость и здоровье» — среди преподавателей</li>
+              <li>Спартакиада «Первокурсник»</li>
+              <li>Сдача нормативов ГТО ко Всемирному дню здоровья</li>
+              <li>Спартакиада студенческих общежитий</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Показать результаты на тренировках или спартакиадах, пройти отбор у тренера.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Инфраструктура и контакты</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Спортивная база</h4>
+            <ul>
+              <li>Дворец спорта ЛГМУ — 2 больших зала и тренажёрный зал</li>
+              <li>Спортивный корпус — спартакиады и соревнования</li>
+              <li>Тренажёрные залы для юношей и девушек</li>
+            </ul>
+            <div class="contact">
+              <strong>Контакт:</strong>
+              Кафедра физической культуры ЛГМУ — заведующий В.М. Сероштан
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== КУЛЬТУРА ==================== -->
+    <details class="accordion-item" data-category="culture">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🎭</span>
+          <span class="header-text">
+            <span class="title">Центр культуры и досуга</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Творческие коллективы</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Вокальный коллектив «Акцент»</h4>
+            <ul>
+              <li>2-е место в международном конкурсе «Современный вокалист» (Москва, май 2026)</li>
+              <li>Участие в университетских концертах</li>
+            </ul>
+            <h4>Танцевальные направления</h4>
+            <ul>
+              <li>Аэробика, традиционные танцы (включая индийский)</li>
+              <li>Хореографические постановки для крупных мероприятий</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться в Центр культуры и досуга студентов (корпус №1, актовый зал) или напрямую к руководителям коллективов.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">КВН-движение</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Команды университета разыгрывают сценки из студенческой жизни и участвуют в концертах Центра культуры и досуга.</p>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Развитие сценической речи, импровизации, актёрского мастерства</li>
+              <li>Работа в команде и навык сценариста</li>
+              <li>Выход на большую сцену — от университетских концертов до региональных фестивалей</li>
+              <li>Участие в Школе КВН и федеральных проектах</li>
+            </ul>
+            <h4>Достижения</h4>
+            <ul>
+              <li>Представители Центра участвовали в V Всероссийской школе КВН (Москва, ноябрь 2025)</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться в Центр культуры и досуга студентов (корпус №1, актовый зал). Состав команд обновляется перед сезоном.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Ключевые конкурсы и мероприятия</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>«Мисс и Мистер ЛГМУ»</h4>
+            <p>Главный конкурс года. Состоялся 21 мая 2026 года. Титул «Мисс ЛГМУ 2026» завоевала Белова Е.</p>
+            <h4>Новогодний мюзикл</h4>
+            <p>Живой музыкальный спектакль с участием студентов и ректора. Премьера «Поверить в чудо, или как спасти Новый год» — 25 декабря 2025 года.</p>
+            <h4>Концерты</h4>
+            <ul>
+              <li>Ко Дню медицинского работника (июнь)</li>
+              <li>К Международному женскому дню (март)</li>
+              <li>Конкурс «Наглядная фармакология» (40+ работ)</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Участвовать в конкурсах через Центр культуры и досуга. Заявки на «Мисс и Мистер ЛГМУ» принимаются заранее — следить за анонсами.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Русский культурно-просветительский центр «Исцеление»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Создан 11 июня 2025 года в преддверии Дня России.</p>
+            <h4>Направления работы</h4>
+            <ul>
+              <li>Русская медицинская школа и её отличия</li>
+              <li>Русский язык как основа идентичности</li>
+              <li>Православные традиции лечения</li>
+              <li>Луганский врачебный характер</li>
+              <li>Скрепы врачевания: милосердие, сострадание, гуманность, духовность</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться к руководству Центра или следить за анонсами мероприятий на сайте университета.</p>
+            </div>
+            <div class="contact">
+              <strong>Руководитель:</strong>
+              и.о. проректора по учебной работе, доцент Бибик В.В.<br>
+              <strong>Духовный наставник:</strong> протоиерей Александр Пономарев
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== ПАТРИОТИКА ==================== -->
+    <details class="accordion-item" data-category="patriot">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🎖️</span>
+          <span class="header-text">
+            <span class="title">Патриотическое воспитание</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Клуб «Я горжусь»</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Исторические и научные факты, экскурсии, походы, тренинги</li>
+              <li>Личное общение с героями (наука, медицина, СВО, культура)</li>
+              <li>Реализация собственных идей и мероприятий</li>
+              <li>Развитие лидерских качеств</li>
+            </ul>
+            <h4>Направления</h4>
+            <ul>
+              <li>Единая система патриотического воспитания</li>
+              <li>Ценности: труд, семья, здоровье, служение Отечеству</li>
+              <li>Историко-культурное наследие России</li>
+              <li>Взаимодействие с госорганами и общественными организациями</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Подписаться на сообщество <a href="https://vk.com/gorzhus_lgmu" target="_blank" rel="noopener noreferrer">vk.com/gorzhus_lgmu</a>. Координация — через управление по молодёжной политике ЛГМУ.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <img src="https://sun9-85.userapi.com/impg/A2wvDbaTjMAdqV5FXNVaFEjTQMop2Q4xckYsxg/SmRbE_6ol7s.jpg?size=600x600&quality=96&sign=3e936a38068d1fdd9b0e090d0276a29d&type=album"
+                   alt="" class="sub-icon" width="40" height="40" loading="lazy" decoding="async">
+              <span class="sub-title">Молодая Гвардия Единой России</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Договор о сотрудничестве подписан в мае 2025 года.</p>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Социальные и патриотические активности</li>
+              <li>Федеральные проекты и акции</li>
+              <li>Развитие лидерских качеств</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Связаться с активом МГЕР ЛГМУ или следить за анонсами в официальных группах университета.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">«Волонтёры Победы» и помощь ветеранам</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Форматы работы</h4>
+            <ul>
+              <li>Поздравления ветеранов ВОВ на дому</li>
+              <li>Акция «С любовью в сердце» — адресная помощь</li>
+              <li>Поздравления бойцов СВО с праздниками</li>
+              <li>Сбор гуманитарной помощи для фронта</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Стать волонтёром-медиком (см. раздел «Волонтёрство») или участником волонтёрского отряда ЛГМУ.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Ключевые мероприятия и проекты</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <ul>
+              <li><strong>Диктант Победы</strong> — международная акция (24 апреля 2026)</li>
+              <li><strong>Бессмертный полк ЛГМУ</strong> — фотовыставка</li>
+              <li><strong>«Победа — дело семейное»</strong> — доклады о героях ВОВ, вручение книг «Солдаты победы»</li>
+              <li><strong>Форум «Медики-Патриоты»</strong> — 2-е место в номинации «Служение Отечеству» (Смоленск, 2024)</li>
+              <li><strong>Фотовыставка «Медицинские подвиги в зоне боевых действий»</strong></li>
+              <li><strong>День неизвестного солдата</strong> — митинг-реквием 3 декабря, мемориальный комплекс «Острая могила»</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Следить за анонсами в официальных группах университета и сообществе СПК «Я горжусь» — <a href="https://vk.com/gorzhus_lgmu" target="_blank" rel="noopener noreferrer">vk.com/gorzhus_lgmu</a>.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== СТУДСОВЕТ ==================== -->
+    <details class="accordion-item" data-category="council">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🗣️</span>
+          <span class="header-text">
+            <span class="title">Студенческий совет и самоуправление</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Структура Студенческого совета</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Состав</h4>
+            <ul>
+              <li><strong>Председатель</strong> — избирается из числа студентов</li>
+              <li>Председатели советов общежитий</li>
+              <li>Студенческие деканы факультетов</li>
+              <li>Лидеры студенческих объединений</li>
+            </ul>
+            <h4>Структурные подразделения</h4>
+            <ul>
+              <li>Студенческие советы общежитий</li>
+              <li>Студенческие деканаты факультетов</li>
+              <li>Студенческий клуб</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Стать старостой группы или курса, войти в студенческий совет общежития, участвовать в работе студенческого деканата факультета.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Функции и полномочия</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Права</h4>
+            <ul>
+              <li>Вносить предложения по использованию материально-технической базы</li>
+              <li>Защищать права обучающихся</li>
+              <li>Участвовать в планировании внеучебных мероприятий</li>
+              <li>Создавать студенческие объединения</li>
+              <li>Представлять интересы студентов перед администрацией</li>
+            </ul>
+            <h4>Обязанности</h4>
+            <ul>
+              <li>Работа по укреплению учебной дисциплины</li>
+              <li>Содействие социально-бытовым условиям</li>
+              <li>Рассмотрение обращений студентов</li>
+              <li>Ежегодный отчёт на конференции</li>
+            </ul>
+            <p><strong>Представительская функция:</strong> председатель входит в Учёный совет с правом голоса.</p>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Ключевые мероприятия</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <ul>
+              <li><strong>«Диалог на равных» с ректором</strong> — открытое общение</li>
+              <li><strong>День открытых дверей</strong> — интерактивные площадки, мастер-классы</li>
+              <li><strong>«СТУДзаБЕГ»</strong> — всероссийская акция (1000+ студентов ЛГМУ, 2024)</li>
+              <li><strong>Спартакиада «СпортЛГМУ»</strong></li>
+              <li><strong>Интеллектуальные игры</strong> — «Что? Где? Когда?», брейн-ринг «Память жива»</li>
+              <li><strong>Новогодние мероприятия</strong></li>
+              <li><strong>Акция ко Дню Государственного флага РФ</strong> (19 августа 2026, совместно с МГЕР)</li>
+              <li><strong>«Внимание, первокурсник!»</strong> — инструкция по заселению в общежитие</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Как присоединиться</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <ul>
+              <li>Через студенческий совет общежития</li>
+              <li>Через студенческий деканат факультета</li>
+              <li>Через студенческие объединения</li>
+              <li>Через собственную инициативу и проект</li>
+            </ul>
+            <div class="contact">
+              <strong>Контакты:</strong>
+              корпус №1 ЛГМУ, студенческий офис<br>
+              Заседания — раз в месяц
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== КАРЬЕРА ==================== -->
+    <details class="accordion-item" data-category="career">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">💼</span>
+          <span class="header-text">
+            <span class="title">Карьера</span>
+            <span class="meta">7 направлений</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Центр карьеры ЛГМУ</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Создан в 2023 году для содействия трудоустройству студентов, ординаторов и выпускников.</p>
+            <h4>Направления работы</h4>
+            <ul>
+              <li>Консультирование по резюме, собеседованиям, трудовому праву</li>
+              <li>Ярмарки вакансий и презентации работодателей</li>
+              <li>Сбор и распространение информации о вакансиях</li>
+              <li>Взаимодействие с организациями здравоохранения</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться в Центр карьеры (корпус №2, 1 этаж, каб. №13) или записаться на консультацию по телефону / email.</p>
+            </div>
+            <div class="contact">
+              <strong>Контакты:</strong>
+              Руководитель — Рассомахина Олеся Михайловна<br>
+              Телефон: <a href="tel:+79591141352">+7 (959) 114-13-52</a><br>
+              Email: <a href="mailto:careerLGMU@yandex.ru">careerLGMU@yandex.ru</a><br>
+              Адрес: корпус №2, 1 этаж, каб. №13
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Приёмная кампания в ординатуру 2026/2027</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Приём ведётся по 63 специальностям ординатуры — клиническая медицина, науки о здоровье, фармация. Полный перечень — в Правилах приёма, п. 3.</p>
+            <h4>Ключевые даты</h4>
+            <ul>
+              <li><strong>Приём документов:</strong> 1 июля — 25 июля 2026, до 16:00 по местному времени</li>
+              <li><strong>Вступительное тестирование:</strong> 29–30 июля 2026</li>
+              <li><strong>Завершение приёма оригинала:</strong> 3 августа 2026 (КЦП), 5 августа 2026 (платники)</li>
+              <li><strong>Зачисление:</strong> 4 августа (целевая квота), 5 августа (КЦП), 6 августа (платники)</li>
+              <li><strong>Дополнительный приём:</strong> до 29 августа 2026</li>
+            </ul>
+            <h4>Адрес приёма документов</h4>
+            <p>г. Луганск, кв. 50-летия Обороны Луганска, 1г, корпус №2, 1 этаж.</p>
+            <p><strong>Часы работы:</strong> пн–пт 09:00–16:00 (перерыв 12:00–13:00), сб 09:00–13:00 без перерыва, вс — выходной.</p>
+            <h4>Что важно знать</h4>
+            <ul>
+              <li>Форма обучения — <strong>очная</strong>. Срок: 2 года, кроме «Физической и реабилитационной медицины», «Сердечно-сосудистой хирургии», «Нейрохирургии» — 3 года</li>
+              <li>Одновременно можно подать документы не более чем в <strong>3 организации</strong> и участвовать в конкурсе не более чем по <strong>2 специальностям</strong> в каждой</li>
+              <li>Выпускники текущего года — результат первичной аккредитации засчитывается как результат вступительного испытания</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Совмещение учёбы и работы</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Работа средним медперсоналом с 3 курса</h4>
+            <p>Согласно приказу Минздрава России №511н от 02.10.2024, студенты, освоившие программу высшего медицинского образования в объёме <strong>трёх курсов и более</strong>, могут пройти аккредитацию и получить допуск к работе на должностях среднего медицинского персонала.</p>
+            <ul>
+              <li><strong>Кто может:</strong> студенты 3 курса и старше специальностей «Лечебное дело», «Педиатрия», «Медико-профилактическое дело», «Стоматология»</li>
+              <li><strong>Какие должности:</strong> медицинская сестра/брат, медицинский лабораторный техник и другие должности среднего медперсонала</li>
+              <li><strong>Как долго действует допуск:</strong> справка выдаётся после 3 курса и позволяет работать в течение 5 лет</li>
+              <li><strong>Что для этого нужно:</strong> успешно сдать аккредитацию (тестирование + практические навыки)</li>
+            </ul>
+            <p><strong>Важно:</strong> допуск к работе не отменяет учёбу — вы продолжаете осваивать программу специалитета параллельно с работой.</p>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Обратиться в Центр карьеры или к координатору программы.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Ярмарка вакансий</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Масштаб (15 апреля 2026)</h4>
+            <ul>
+              <li>66 медицинских организаций ЛНР (28 из Луганска) + 2 из Херсонской области</li>
+              <li>Более 900 будущих медиков</li>
+              <li>Прямой диалог с главными врачами</li>
+            </ul>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Предварительные собеседования на месте</li>
+              <li>Заключение целевых договоров до диплома</li>
+              <li>Понимание рынка труда</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Следить за анонсами Центра карьеры. Мероприятие проводится ежегодно, обычно в апреле.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Центр надпрофессиональных компетенций (ЦНКО)</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Создан в сентябре 2025 года на базе ЛГМУ. Это проект Президентской платформы «Россия — страна возможностей».</p>
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Развитие «мягких навыков» (soft skills): коммуникация, командная работа, лидерство</li>
+              <li>Игровые тренинги для первокурсников</li>
+              <li>Тестирование на платформе softskills</li>
+              <li>Выход на федеральные проекты и Мастерскую управления «Сенеж»</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Подписаться на группу <a href="https://vk.com/cnkolgmu" target="_blank" rel="noopener noreferrer">vk.com/cnkolgmu</a> и следить за анонсами.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Целевое обучение</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Ежемесячная выплата не ниже государственной академической стипендии — <strong>2 100 руб.</strong></li>
+              <li>Подъёмные: <strong>3 оклада</strong> (5 — для сельской местности)</li>
+              <li>Гарантированное трудоустройство после выпуска</li>
+              <li>Программы «Земский доктор/фельдшер» — для работы на селе</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Заключить договор с больницей через Минздрав ЛНР. Срок подачи заявок — до начала приёмной кампании.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Как получить баллы в ординатуру</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Баллы за индивидуальные достижения <strong>суммируются</strong> с баллами за вступительное тестирование. Полный перечень — в п. 48 Правил приёма на 2026/2027.</p>
+            <p><strong>Минимальный балл за тестирование — 70.</strong> Ниже — выбывание из конкурса без права пересдачи (п. 34, 40 Правил).</p>
+
+            <h4>Индивидуальные достижения (п. 48 Правил)</h4>
+            <ul>
+              <li><strong>А. Стипендия Президента или Правительства РФ</strong> (в период получения высшего медицинского / фармацевтического образования) — <strong>20 баллов</strong></li>
+              <li><strong>Б. Диплом с отличием</strong> — <strong>55 баллов</strong></li>
+              <li><strong>В. Не менее одной статьи в журнале ядра РИНЦ или международной базы научного цитирования</strong> (автор или соавтор) — <strong>20 баллов</strong></li>
+              <li><strong>Г. Общий стаж на медицинских / фармацевтических должностях</strong> (в РФ): среднее профобразование (0,5 ставки) от 9 мес. до 1,5 лет — <strong>15 баллов</strong>; от 1,5 лет — <strong>80 баллов</strong>; высшее (1,0 ставки) от 9 мес. до 1,5 лет — <strong>100 баллов</strong>; от 1,5 лет — <strong>150 баллов</strong></li>
+              <li><strong>Д. Дополнительно к критерию Г — работа не менее 9 мес. в сельских населённых пунктах или рабочих посёлках</strong> — <strong>25 баллов</strong></li>
+              <li><strong>Е. Дипломант Всероссийской студенческой олимпиады «Я — профессионал»</strong> в области медицины и здравоохранения — <strong>20 баллов</strong></li>
+              <li><strong>Ж. Волонтёрство в сфере охраны здоровья</strong> (в том числе с регистрацией в единой информационной системе) — <strong>20 баллов</strong></li>
+              <li><strong>З. Волонтёрство по профилактике, диагностике и лечению COVID-19, не менее 150 часов</strong> — <strong>20 баллов</strong></li>
+              <li><strong>И. Волонтёрство, связанное с проведением СВО, не менее 150 часов</strong> — <strong>100 баллов</strong></li>
+              <li><strong>К. Работа или практическая подготовка по диагностике и лечению COVID-19, не менее 30 дней</strong> — <strong>30 баллов</strong></li>
+              <li><strong>Л. Стаж на медицинских должностях на территориях ДНР, ЛНР, Запорожской, Херсонской областей</strong>: среднее профобразование (0,5 ставки) от 9 мес. до 1,5 лет — <strong>150 баллов</strong>; высшее (1,0 ставки) от 9 мес. до 1,5 лет — <strong>200 баллов</strong>; высшее (1,0 ставки) от 1,5 лет — <strong>300 баллов</strong></li>
+              <li><strong>М. Поступление по договору о целевом обучении на программу следующего уровня</strong> после завершения предыдущей по целевому договору — <strong>200 баллов</strong></li>
+              <li><strong>Н. Иные индивидуальные достижения</strong> (участие в СВО для участников и членов их семей, Школа молодых учёных, СНО, выступления на научных форумах, донорство крови и её компонентов, профсоюзная активность и др.) — <strong>не более 20 баллов</strong></li>
+            </ul>
+
+            <div class="join-block">
+              <strong>Правила выбора при пересечении критериев (п. 49)</strong>
+              <p>При наличии достижений по «З» и «К» — баллы начисляются <strong>только по «К»</strong> (30, а не 50).</p>
+              <p>При наличии достижений по «Г» и «Л» — баллы начисляются <strong>только по одному из них</strong>, по выбору поступающего.</p>
+            </div>
+
+            <div class="join-block">
+              <strong>Профсоюзная активность</strong>
+              <p><strong>2 балла</strong> в рамках критерия «Н» — согласно дополнительному соглашению между ректором ЛГМУ А.М. Левчиным и председателем профкома Д.А. Гукаловым от 01.07.2026.</p>
+            </div>
+
+            <div class="contact">
+              <strong>Источник:</strong>
+              Правила приёма на обучение по программам ординатуры на 2026/2027, п. 48. Принято решением Учёного совета (протокол №3 от 19.03.2026), утверждено приказом ректора №101 от 19.03.2026. Полный текст — на официальном сайте ЛГМУ.
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== СОЦИАЛЬНАЯ ПОДДЕРЖКА ==================== -->
+    <details class="accordion-item" data-category="support">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🛡️</span>
+          <span class="header-text">
+            <span class="title">Социальная поддержка</span>
+            <span class="meta">6 направлений</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Стипендии и выплаты</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Виды стипендий</h4>
+            <ul>
+              <li><strong>ГАС</strong> — государственная академическая стипендия (по успеваемости)</li>
+              <li><strong>ГСС</strong> — государственная социальная стипендия (сироты, инвалиды, нуждающиеся)</li>
+              <li><strong>Стипендия Правительства ЛНР</strong> — для ординаторов-целевиков</li>
+              <li><strong>ПГАС</strong> — повышенная государственная академическая стипендия за особые достижения</li>
+              <li><strong>Стипендии Президента и Правительства РФ</strong></li>
+            </ul>
+            <div class="join-block">
+              <strong>Как оформить</strong>
+              <p>Обратиться в деканат или учебный отдел. Для социальной стипендии — предоставить документы, подтверждающие право на льготу.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Материальная помощь</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>На материальную поддержку выделяется 25% стипендиального фонда.</p>
+            <h4>Кому оказывается</h4>
+            <ul>
+              <li>Детям-сиротам и оставшимся без попечения</li>
+              <li>Студентам с инвалидностью</li>
+              <li>Пострадавшим от чрезвычайных ситуаций</li>
+              <li>Молодым студенческим семьям с детьми</li>
+            </ul>
+            <h4>Формы</h4>
+            <ul>
+              <li>Единовременные выплаты, помощь при рождении ребёнка</li>
+              <li>Возмещение расходов на лечение, протезирование</li>
+              <li>Путёвки на санаторно-курортное лечение</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как получить</strong>
+              <p>Написать заявление на имя ректора, предоставить документы, подтверждающие трудную жизненную ситуацию. Решение принимает стипендиальная комиссия.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Профсоюзная организация студентов</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Что даёт</h4>
+            <ul>
+              <li>Защита прав и представительство в органах управления</li>
+              <li>Материальная помощь в трудной ситуации</li>
+              <li>Скидки на обучение, снижение платы за общежитие</li>
+              <li><strong>+2 балла при поступлении в ординатуру</strong> — в рамках критерия «Н» Правил приёма (не более 20 баллов суммарно по критерию), согласно дополнительному соглашению между ректором ЛГМУ А.М. Левчиным и председателем профкома Д.А. Гукаловым от 01.07.2026</li>
+            </ul>
+            <p><strong>Что значит «активный участник»?</strong> Это студент, который регулярно участвует в мероприятиях профкома, помогает в организации, состоит в активе. Точные критерии уточняйте в профкоме при вступлении.</p>
+            <div class="join-block">
+              <strong>Как вступить</strong>
+              <p>Обратиться в профком студентов (корпус №1), заполнить заявление и уплачивать профсоюзные взносы (1% от стипендии).</p>
+            </div>
+            <div class="contact">
+              <strong>Председатель профкома:</strong>
+              Гукалов Данил Андреевич<br>
+              Местонахождение: корпус №1 ЛГМУ
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Общежития</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Общая информация</h4>
+            <p>Около 350 мест. Двух- и трёхместные комнаты, кухни с плитами, душевые с бойлерами, круглосуточная охрана. Капитальный ремонт девятиэтажного здания (7,5 тыс. кв. м) планируется завершить в 2027 году.</p>
+            <h4>Льготы</h4>
+            <ul>
+              <li>Снижение платы при материальных трудностях</li>
+              <li>Приоритет — сиротам, инвалидам, семейным студентам</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как заселиться</strong>
+              <p>Обратиться в деканат или в отдел по работе с общежитиями, предоставить необходимые документы. Полезные советы для первокурсников публикует Студенческий совет («Внимание, первокурсник!»).</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Поддержка молодых семей</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Формы поддержки</h4>
+            <ul>
+              <li>Юридическая помощь по семейным вопросам</li>
+              <li>Психологическая поддержка в родительстве</li>
+              <li>Материальная помощь семьям с детьми</li>
+              <li>Приоритетные места в общежитии для семей</li>
+              <li>Гибкий график для молодых родителей</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как получить поддержку</strong>
+              <p>Обратиться в управление по молодёжной политике ЛГМУ или напрямую в ректорат.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Студенты с ВОТ</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>ВОТ — временно оккупированные территории.</p>
+            <h4>Программы поддержки</h4>
+            <ul>
+              <li>«Квота-2» и образовательный центр «Донбасс-Украина»</li>
+              <li>Гарантированное бесплатное жильё в общежитии</li>
+              <li>Единовременные выплаты при поступлении</li>
+              <li>Социальное и психологическое сопровождение</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как получить</strong>
+              <p>Обратиться в приёмную комиссию или учебный отдел ЛГМУ, предоставить документы, подтверждающие статус.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ==================== ПСИХОЛОГИЯ ==================== -->
+    <details class="accordion-item" data-category="psych">
+      <summary class="accordion-header">
+        <span class="header-left">
+          <span class="icon" aria-hidden="true">🧠</span>
+          <span class="header-text">
+            <span class="title">Психологическая помощь</span>
+            <span class="meta">4 направления</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div class="body-content">
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Социально-психологическая служба</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Работает с 2024 года. Бесплатные профессиональные консультации для студентов и сотрудников.</p>
+            <h4>С какими вопросами можно обратиться</h4>
+            <ul>
+              <li>Трудности в учёбе, конфликты в семье</li>
+              <li>Тревожные и депрессивные состояния, одиночество</li>
+              <li>Поиск себя, переживание утраты</li>
+              <li>Вопросы воспитания детей</li>
+            </ul>
+            <h4>Специалисты</h4>
+            <ul>
+              <li>Бородавкина Ольга Анатольевна — педагог-психолог, <a href="tel:+79591263488">+7 (959) 126-34-88</a></li>
+              <li>Коротенко Лилия Николаевна — психолог, <a href="tel:+79595121508">+7 (959) 512-15-08</a></li>
+            </ul>
+            <div class="join-block">
+              <strong>Как записаться</strong>
+              <p>Telegram/SMS: <a href="tel:+79591263488">+7 (959) 126-34-88</a>; Email: <a href="mailto:psiholog_lgmu@mail.ru">psiholog_lgmu@mail.ru</a>. Все консультации конфиденциальны и бесплатны.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Центр ментального здоровья</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <p>Создан 19 февраля 2025 года. Обустроен современными средствами: фитнес-коврики, зоны арт-терапии и групповой терапии.</p>
+            <h4>Направления</h4>
+            <ul>
+              <li>Профилактика эмоционального выгорания</li>
+              <li>Адаптация к университетской жизни</li>
+              <li>Техники саморегуляции</li>
+              <li>Арт-терапия и групповая терапия</li>
+            </ul>
+            <h4>Open Days и просветительство</h4>
+            <ul>
+              <li>Лекции «Как пережить стресс во время сессии» (1–2 курсы)</li>
+              <li>Мастер-классы для абитуриентов «Как сохранять спокойствие при подготовке»</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Записаться через социально-психологическую службу. Мероприятия анонсируются в официальных группах университета.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Направления работы и мероприятия</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Просвещение</h4>
+            <ul>
+              <li>Противодействие экстремизму</li>
+              <li>«Подготовка к успешной сдаче первой сессии»</li>
+              <li>«Мы интересны друг другу»</li>
+            </ul>
+            <h4>Адаптация и поддержка</h4>
+            <ul>
+              <li>Помощь иностранным студентам (Индия)</li>
+              <li>Встреча героев СВО для первокурсников</li>
+            </ul>
+            <h4>Наука и методика</h4>
+            <ul>
+              <li>Международная конференция на базе ЛГПУ</li>
+              <li>Семинар по коррекционной педагогике</li>
+              <li>Оценка психоэмоционального состояния студентов</li>
+            </ul>
+            <div class="join-block">
+              <strong>Как присоединиться</strong>
+              <p>Участвовать в мероприятиях через кураторов, следить за анонсами на сайте и в официальных группах университета.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="sub-item">
+          <summary class="sub-header">
+            <span class="sub-title-wrap">
+              <span class="sub-title">Контакты и запись</span>
+            </span>
+            <span class="sub-arrow" aria-hidden="true">▼</span>
+          </summary>
+          <div class="sub-content">
+            <h4>Социально-психологическая служба</h4>
+            <ul>
+              <li>Телефон: <a href="tel:+79591263488">+7 (959) 126-34-88</a> (Telegram/SMS)</li>
+              <li>Email: <a href="mailto:psiholog_lgmu@mail.ru">psiholog_lgmu@mail.ru</a></li>
+              <li>Форматы: очно, онлайн, письменно</li>
+              <li>Бесплатно для студентов, аспирантов, сотрудников</li>
+            </ul>
+            <h4>Экстренная помощь</h4>
+            <p>Центр экстренной психологической помощи «Мы рядом» — для участников учебно-воспитательного процесса.</p>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+  </main>
+
+  <!-- ==================== ВИДЕО ==================== -->
+  <section class="video-section" aria-label="Видео о МЕДМОЛ">
+    <h2 class="video-heading">Видео о МЕДМОЛ</h2>
+    <div class="video-wrap">
+      <iframe
+        src="https://rutube.ru/play/embed/a71639e78eca9f6330156fa34a30cb09"
+        title="Видео о МЕДМОЛ ЛГМУ"
+        frameborder="0"
+        allow="clipboard-write; autoplay"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    Лаборатория цифровой медицины ЛГМУ · Конкурс «ЛГМУ твой ход»<br>
+    <span class="footer-note">Информация актуальна на 2026/2027 учебный год</span>
+  </footer>
+</div>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Наверх">↑</button>
+
+<script>
+(function () {
+  'use strict';
+
+  const $  = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+  /* ============ ЛОГОТИПЫ ============ */
+  function setupLogoFallback(imgId, fallbackId) {
+    const img = document.getElementById(imgId);
+    const fallback = document.getElementById(fallbackId);
+    if (!img || !fallback) return;
+    const showFallback = () => {
+      img.style.display = 'none';
+      fallback.style.display = 'flex';
+    };
+    const showImage = () => {
+      img.style.display = 'block';
+      fallback.style.display = 'none';
+    };
+    img.addEventListener('error', showFallback);
+    img.addEventListener('load', showImage);
+    if (img.complete && img.naturalWidth === 0) showFallback();
+  }
+  setupLogoFallback('logo-medmol', 'fallback-medmol');
+  setupLogoFallback('logo-lgmu', 'fallback-lgmu');
+
+  /* ============ РАЗВЕРНУТЬ / СВЕРНУТЬ ВСЁ ============ */
+  function initExpandCollapse() {
+    const expandBtn = document.getElementById('expandAllBtn');
+    const collapseBtn = document.getElementById('collapseAllBtn');
+
+    if (expandBtn) {
+      expandBtn.addEventListener('click', () => {
+        $$('details.accordion-item:not(.hidden):not(.filtered-out)').forEach(d => { d.open = true; });
+        $$('details.sub-item:not(.hidden)').forEach(d => { d.open = true; });
+      });
+    }
+    if (collapseBtn) {
+      collapseBtn.addEventListener('click', () => {
+        $$('details.accordion-item').forEach(d => { d.open = false; });
+        $$('details.sub-item').forEach(d => { d.open = false; });
+      });
+    }
+  }
+
+  /* ============ ПОИСК ============ */
+  const searchIndex = [];
+  function buildSearchIndex() {
+    $$('details.sub-item').forEach(sub => {
+      const titleEl = sub.querySelector('.sub-title');
+      const contentEl = sub.querySelector('.sub-content');
+      const title = (titleEl ? titleEl.textContent : '').trim();
+      const content = (contentEl ? contentEl.textContent : '').trim();
+      searchIndex.push({
+        el: sub,
+        parent: sub.closest('details.accordion-item'),
+        haystack: (title + ' ' + content).toLowerCase()
+      });
+    });
+  }
+
+  const status = document.getElementById('searchStatus');
+  const searchInput = document.getElementById('searchInput');
+
+  function pluralize(n, one, few, many) {
+    const mod10 = n % 10, mod100 = n % 100;
+    if (mod10 === 1 && mod100 !== 11) return one;
+    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return few;
+    return many;
+  }
+
+  function setStatus(text, tone) {
+    if (!status) return;
+    status.textContent = text;
+    if (tone) status.setAttribute('data-tone', tone);
+    else status.removeAttribute('data-tone');
+  }
+
+  function resetSearch() {
+    $$('details.sub-item').forEach(s => {
+      s.classList.remove('hidden');
+      s.open = false;
+    });
+    $$('details.accordion-item').forEach(a => {
+      a.classList.remove('hidden', 'filtered-out');
+      a.open = false;
+    });
+    setStatus('');
+  }
+
+  function runSearch(rawQuery) {
+    const q = rawQuery.trim().toLowerCase();
+    if (!q) {
+      resetSearch();
+      applyFilter();
+      return;
+    }
+
+    if (activeFilter !== 'all') {
+      activeFilter = 'all';
+      $$('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === 'all'));
+    }
+    $$('details.accordion-item').forEach(el => el.classList.remove('filtered-out', 'hidden'));
+
+    let matchCount = 0;
+
+    searchIndex.forEach(item => {
+      const matched = item.haystack.includes(q);
+      item.el.classList.toggle('hidden', !matched);
+      if (matched) {
+        matchCount++;
+        item.el.open = true;
+      }
+    });
+
+    if (matchCount > 0) {
+      $$('details.accordion-item').forEach(acc => {
+        const visible = acc.querySelector('details.sub-item:not(.hidden)');
+        const show = !!visible;
+        acc.classList.toggle('hidden', !show);
+        if (show) acc.open = true;
+      });
+    } else {
+      $$('details.accordion-item').forEach(acc => {
+        const titleEl = acc.querySelector('.title');
+        const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+        if (title.includes(q)) {
+          acc.classList.remove('hidden');
+          acc.open = true;
+          acc.querySelectorAll('details.sub-item').forEach(s => {
+            s.classList.remove('hidden');
+            s.open = true;
+          });
+          matchCount++;
+        } else {
+          acc.classList.add('hidden');
+        }
+      });
+    }
+
+    if (matchCount === 0) {
+      setStatus('Ничего не найдено. Попробуйте «волонтёр», «спорт», «стипендия» или «психолог».', 'empty');
+    } else {
+      const word = pluralize(matchCount, 'раздел', 'раздела', 'разделов');
+      setStatus('Найдено: ' + matchCount + ' ' + word + '.');
+    }
+  }
+
+  function initSearch() {
+    if (!searchInput) return;
+    let timer = null;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => runSearch(searchInput.value), 140);
+    });
+  }
+
+  /* ============ ФИЛЬТР-ЧИПЫ ============ */
+  let activeFilter = 'all';
+  function applyFilter() {
+    $$('details.accordion-item').forEach(acc => {
+      const match = activeFilter === 'all' || acc.dataset.category === activeFilter;
+      acc.classList.toggle('filtered-out', !match);
+    });
+  }
+  function initChips() {
+    $$('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filter = chip.dataset.filter;
+        if (filter === activeFilter) return;
+        activeFilter = filter;
+        $$('.chip').forEach(c => c.classList.toggle('active', c === chip));
+        if (searchInput) searchInput.value = '';
+        resetSearch();
+        applyFilter();
+      });
+    });
+  }
+
+  /* ============ КНОПКА НАВЕРХ ============ */
+  function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    let ticking = false;
+    const update = () => {
+      btn.classList.toggle('visible', window.scrollY > 400);
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }, { passive: true });
+    update();
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ============ ПЕЧАТЬ ============ */
+  let printSnapshot = null;
+  function expandAllForPrint() {
+    const snapshot = [];
+    $$('details').forEach(d => {
+      snapshot.push(d.open);
+      d.open = true;
+    });
+    return snapshot;
+  }
+  function restoreAfterPrint(snapshot) {
+    if (!snapshot) return;
+    const all = $$('details');
+    all.forEach((d, i) => {
+      if (i < snapshot.length) d.open = snapshot[i];
+    });
+  }
+  window.addEventListener('beforeprint', () => {
+    printSnapshot = expandAllForPrint();
+  });
+  window.addEventListener('afterprint', () => {
+    restoreAfterPrint(printSnapshot);
+    printSnapshot = null;
+  });
+
+  /* ============ ИНИЦИАЛИЗАЦИЯ ============ */
+  function init() {
+    buildSearchIndex();
+    initExpandCollapse();
+    initSearch();
+    initChips();
+    initBackToTop();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
